@@ -19,7 +19,9 @@
 
 **npm i --save-dev @types/cassandra-driver @types/cors @types/morgan @types/uuid  nodemon.**
 
+### dependencias
 
+- cassandra-driver (Libreria de cassandra)
 
 <h3 style="color:tomato">Dependencias</h3>
 
