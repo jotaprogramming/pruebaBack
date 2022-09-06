@@ -1,9 +1,9 @@
 import { Route } from './routes';
-import * as usersController from '../Controllers/users.controller';
+import * as blockedUsers from '../Controllers/blockedUsers.controller';
 
-class UserRoutes extends Route{
+class BlockedUsersRoutes extends Route{
     constructor(){
-        super(usersController);
+        super(blockedUsers);
     }
     indexUser(){
         this.index()
