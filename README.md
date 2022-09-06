@@ -12,6 +12,10 @@
 
 - cassandra-driver (Libreria de cassandra)
 
+### Dependencias
+
+- cassandra-driver (Libreria de cassandra)
+
 - cors (Para permitir el intercambio de recursos de origen cruzado)
 
 - express (Montar el servidor)
