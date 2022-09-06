@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { destroy, index, show, store, update } from '../Controllers/articles.controller';
+import { destroy, index, show, store, update } from '../Controllers/blocked_users.controller';
 
 const router = Router();
 
