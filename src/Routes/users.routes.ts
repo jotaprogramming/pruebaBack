@@ -1,9 +1,13 @@
 import { Route } from './routes';
 import * as usersController from '../Controllers/users.controller';
 
-class UserRoutes extends Route{
+export class UsersRoutes extends Route{
     constructor(){
         super(usersController);
+    }
+
+    get router(){
+        return this._router;
     }
     indexUser(){
         this.index()

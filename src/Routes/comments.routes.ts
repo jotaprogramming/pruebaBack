@@ -1,10 +1,15 @@
 import { Route } from './routes';
-import * as comentsController from '../Controllers/coments.controller';
+import * as comentsController from '../Controllers/comments.controller';
 
-class CommentsRoutes extends Route{
+export class CommentsRoutes extends Route{
     constructor(){
         super(comentsController);
     }
+
+    get router(){
+        return this._router;
+    }
+
     indexComment(){
         this.index()
     }

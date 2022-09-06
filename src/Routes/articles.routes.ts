@@ -1,10 +1,15 @@
 import { Route } from './routes';
 import * as articlesController from '../Controllers/articles.controller';
 
-class ArticlesRoutes extends Route{
+export class ArticlesRoutes extends Route{
     constructor(){
         super(articlesController);
     }
+
+    get router(){
+        return this._router;
+    }
+
     indexArticle(){
         this.index()
     }
