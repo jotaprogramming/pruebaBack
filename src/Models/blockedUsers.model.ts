@@ -5,7 +5,7 @@ import Query from './defaultQuery';
 class Model extends Query{
 
     constructor(table : string){
-        super(table, 'blocked_users_id');
+        super(table, 'blocked_user_id');
     }
 
     async make(body : any) {
@@ -13,7 +13,7 @@ class Model extends Query{
             const attr = Object.keys(body).join(',');
             const bodyArray = [this._db.uuid, new Date, ...Object.values(body)];
             const result : any = await this._db.create.execute(`INSERT INTO ${this._table} (
-                blocked_users_id,
+                blocked_user_id,
                 created_at,
                 ${attr}
             ) VALUES (?, ?, ?, ?, ?)`, bodyArray, { prepare: true })
