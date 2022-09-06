@@ -1,12 +1,32 @@
-import { Router } from 'express';
-import { destroy, index, show, store, update } from '../Controllers/users.controller';
+import { Route } from './routes';
+import * as usersController from '../Controllers/users.controller';
 
-const router = Router();
+export class UsersRoutes extends Route{
+    constructor(){
+        super(usersController);
+    }
 
-router.get('/', index);
-router.get('/:id', show);
-router.post('/add', store);
-router.put('/:id', update);
-router.delete('/:id', destroy);
+    get router(){
+        return this._router;
+    }
+    indexUser(){
+        this.index()
+    }
 
-export default router;
+    showUser(){
+        this.show()
+    }
+
+    storeUser(){
+        this.store()
+    }
+
+    updateUser(){
+        this.update()
+    }
+
+    destroyUser(){
+        this.destroy()
+    }
+
+}

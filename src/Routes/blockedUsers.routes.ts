@@ -1,32 +1,32 @@
 import { Route } from './routes';
-import * as comentsController from '../Controllers/comments.controller';
+import * as blockedUsers from '../Controllers/blockedUsers.controller';
 
-export class CommentsRoutes extends Route{
+export class BlockedUsersRoutes extends Route{
     constructor(){
-        super(comentsController);
+        super(blockedUsers);
     }
 
     get router(){
         return this._router;
     }
 
-    indexComment(){
+    indexUser(){
         this.index()
     }
 
-    showComment(){
+    showUser(){
         this.show()
     }
 
-    storeComment(){
+    storeUser(){
         this.store()
     }
 
-    updateComment(){
+    updateUser(){
         this.update()
     }
 
-    destroyComment(){
+    destroyUser(){
         this.destroy()
     }
 
