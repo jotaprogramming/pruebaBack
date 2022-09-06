@@ -17,6 +17,7 @@ CREATE TABLE blogts.comments (
     id_user UUID,
     id_article UUID,
     created_at TIMESTAMP,
+    updated_at TIMESTAMP,
     delete_at TIMESTAMP,
 );
 CREATE TABLE blogts.articles (
@@ -32,4 +33,7 @@ CREATE TABLE blogts.blocked_users (
     blocked_user_id UUID PRIMARY KEY,
     id_user UUID,
     id_article UUID,
+    created_at TIMESTAMP,
+    updated_at TIMESTAMP,
+    delete_at TIMESTAMP,
 );

@@ -11,10 +11,10 @@ class Model extends Query{
             const attr = Object.keys(body).join(',');
             const bodyArray = [this._db.uuid, new Date, ...Object.values(body)];
             const result : any = await this._db.create.execute(`INSERT INTO ${this._table} (
-                user_id,
+                blocked_user_id,
                 created_at,
                 ${attr}
-            ) VALUES (?, ?, ?, ?, ?)`, bodyArray, { prepare: true })
+            ) VALUES (?, ?, ?, ?)`, bodyArray, { prepare: true })
             return result;
         } catch (error : any) {
             return error;
