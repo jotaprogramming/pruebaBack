@@ -6,7 +6,7 @@ interface IUuid {
     uuid : Uuid;
 }
 
-class UuidGenerate implements IUuid{
+abstract class UuidGenerate implements IUuid{
     private _Uuid = cassandra.types.Uuid;
 
     get uuid() {
