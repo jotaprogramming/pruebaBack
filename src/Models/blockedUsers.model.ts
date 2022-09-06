@@ -2,7 +2,7 @@ import { IUser } from '../Utils/Interfaces/model.interface';
 import Database from '../Utils/Database/database';
 import Query from './defaultQuery';
 
-class Model extends Query{
+export class BlockedUsersModel extends Query{
 
     constructor(table : string){
         super(table, 'blocked_user_id');
@@ -23,5 +23,3 @@ class Model extends Query{
         }
     }
 }
-
-export default Model;

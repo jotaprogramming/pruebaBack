@@ -10,24 +10,24 @@ export class ArticlesRoutes extends Route{
         return this._router;
     }
 
-    indexArticle(){
-        this.index()
-    }
+    // indexArticle(){
+    //     this.index()
+    // }
 
-    showArticle(){
-        this.show()
-    }
+    // showArticle(){
+    //     this.show()
+    // }
 
-    storeArticle(){
-        this.store()
-    }
+    // storeArticle(){
+    //     this.store()
+    // }
 
-    updateArticle(){
-        this.update()
-    }
+    // updateArticle(){
+    //     this.update()
+    // }
 
-    destroyArticle(){
-        this.destroy()
-    }
+    // destroyArticle(){
+    //     this.destroy()
+    // }
 
 }

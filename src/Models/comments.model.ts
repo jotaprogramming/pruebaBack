@@ -2,7 +2,7 @@ import { IUser } from '../Utils/Interfaces/model.interface';
 import Database from '../Utils/Database/database';
 import Query from './defaultQuery';
 
-export class CommentModel extends Query{
+export class CommentsModel extends Query{
 
     constructor(table : string){
         super(table, 'comment_id');

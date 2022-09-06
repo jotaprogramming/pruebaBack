@@ -1,5 +1,5 @@
 import express, { Application } from 'express';
-import { Middleware } from '../Middlewares/abstract.middleware';
+import { Middleware } from '../Middlewares/middlewares';
 import { IServer } from '../../Utils/Interfaces/server.interface';
 import Connection from '../../Utils/Database/connection';
 import {UsersRoutes} from '../../Routes/users.routes';

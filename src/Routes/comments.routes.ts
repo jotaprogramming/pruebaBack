@@ -10,24 +10,24 @@ export class CommentsRoutes extends Route{
         return this._router;
     }
 
-    indexComment(){
-        this.index()
-    }
+    // indexComment(){
+    //     this.index()
+    // }
 
-    showComment(){
-        this.show()
-    }
+    // showComment(){
+    //     this.show()
+    // }
 
-    storeComment(){
-        this.store()
-    }
+    // storeComment(){
+    //     this.store()
+    // }
 
-    updateComment(){
-        this.update()
-    }
+    // updateComment(){
+    //     this.update()
+    // }
 
-    destroyComment(){
-        this.destroy()
-    }
+    // destroyComment(){
+    //     this.destroy()
+    // }
 
 }

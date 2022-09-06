@@ -10,24 +10,24 @@ export class BlockedUsersRoutes extends Route{
         return this._router;
     }
 
-    indexUser(){
-        this.index()
-    }
+    // indexUser(){
+    //     this.index()
+    // }
 
-    showUser(){
-        this.show()
-    }
+    // showUser(){
+    //     this.show()
+    // }
 
-    storeUser(){
-        this.store()
-    }
+    // storeUser(){
+    //     this.store()
+    // }
 
-    updateUser(){
-        this.update()
-    }
+    // updateUser(){
+    //     this.update()
+    // }
 
-    destroyUser(){
-        this.destroy()
-    }
+    // destroyUser(){
+    //     this.destroy()
+    // }
 
 }
