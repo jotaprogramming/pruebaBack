@@ -3,7 +3,7 @@ import Query from './defaultQuery';
 class Model extends Query{
 
     constructor(table : string){
-        super(table, 'user_id');
+        super(table, 'blocked_user_id');
     }
 
     async make(body : any) {

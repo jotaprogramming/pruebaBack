@@ -3,13 +3,19 @@ import morgan from 'morgan';
 import { IServer } from '../../Utils/Interfaces/server.interface';
 import Connection from '../../Utils/Database/connection';
 import UserRoutes from '../../Routes/users.routes';
+import CommentRoutes from '../../Routes/comments.routes';
+import ArticleRoutes from '../../Routes/articles.routes';
+import BlockedUserRoutes from '../../Routes/blocked_users.routes';
 import cors from 'cors';
 
 class Server implements IServer{
     private app : Application;
     private port : string;
     private apiPaths = {
-        users: '/api/users'
+        users: '/api/users',
+        comments: '/api/comments',
+        articles: '/api/articles',
+        blocked_users: '/api/blocked_users'
     }
     private db = new Connection();
 
@@ -37,6 +43,9 @@ class Server implements IServer{
 
     routes(){
         this.app.use(this.apiPaths.users, UserRoutes);
+        this.app.use(this.apiPaths.comments, CommentRoutes);
+        this.app.use(this.apiPaths.articles, ArticleRoutes);
+        this.app.use(this.apiPaths.blocked_users, BlockedUserRoutes);
     }
 
     listen() {
