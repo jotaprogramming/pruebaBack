@@ -44,10 +44,17 @@
 
 - Elaborar diagrama de datos NoSql (Column family) &#x2705; (Anggie)
 
-- Paso a paso de Instalacion cassandar & Docker &#10062;
+- Paso a paso de Instalacion cassandar & Docker &#x2705; (Anggie)
 
 - Rutas  &#x2705; (Andrés)
 	
+- Modelos  &#x2705; (Jersón)
+
+- Levantamiento de server &#x2705; (Jersón)
+
+- Controladores &#x2705; (Andrés)
+
+- Conexion a bd &#x2705; (Jersón)
 
 	
 &#10062;
