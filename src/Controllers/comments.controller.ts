@@ -3,31 +3,40 @@ import Model from '../Models/comments.model';
 
 const model = new Model('comments');
 
-export const index = async (req: Request, res: Response) => {
-    const users : any = await model.findAll();
+class Controller {
 
-    res.json(users);
-}
-export const show = async (req: Request, res: Response) => {
-    const { id } = req.params;
-    const user : any = await model.findOne(id);
+    async index(req: Request, res: Response) {
+        const rows : any = await model.findAll();
     
-    res.json(user);
-}
-export const store = async (req: Request, res: Response) => {
-    const user : any = await model.make(req.body);
+        res.json(rows);
+    }
 
-    res.json(user);
-}
-export const update = async (req: Request, res: Response) => {
-    const { id } = req.params;
-    const user : any = await model.update(id, req.body);
+    async show(req: Request, res: Response) {
+        const { id } = req.params;
+        const row : any = await model.findOne(id);
+        
+        res.json(row);
+    }
+
+    async store(req: Request, res: Response) {
+        const row : any = await model.make(req.body);
+
+        res.json(row);
+    }
+
+    async update(req: Request, res: Response) {
+        const { id } = req.params;
+        const row : any = await model.update(id, req.body);
     
-    res.json(user);
+        res.json(row);
+    }
+
+    async destroy(req: Request, res: Response) {
+        const { id } = req.params;
+        const row : any = await model.delete(id);
+        
+        res.json(row);
+    }
 }
-export const destroy = async (req: Request, res: Response) => {
-    const { id } = req.params;
-    const user : any = await model.delete(id);
-    
-    res.json(user);
-}
+
+export default Controller;

@@ -30,6 +30,18 @@ class Query {
         }
     }
 
+    async store(body : any, vars : any) {
+        try {
+            const attr = [...vars, ...Object.keys(body)].join(',');
+            const bodyArray = [this._db.uuid, new Date, ...Object.values(body)];
+            const question_marks = bodyArray.map(_ => '?').join(',');
+            const result : any = await this._db.create.execute(`INSERT INTO ${this._table} (${attr}) VALUES (${question_marks})`, bodyArray, { prepare: true })
+            return result;
+        } catch (error : any) {
+            return error;
+        }
+    }
+
     async update(id : any, body : any){
         try {
             const parameters = {

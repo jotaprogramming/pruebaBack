@@ -1,24 +1,16 @@
 import Query from './defaultQuery';
 
+const key_name = 'articles_id';
+
 class Model extends Query{
 
     constructor(table : string){
-        super(table, 'articles_id');
+        super(table, key_name);
     }
 
     async make(body : any) {
-        try {
-            const attr = Object.keys(body).join(',');
-            const bodyArray = [this._db.uuid, new Date, ...Object.values(body)];
-            const result : any = await this._db.create.execute(`INSERT INTO ${this._table} (
-                articles_id,
-                created_at,
-                ${attr}
-            ) VALUES (?, ?, ?, ?, ?)`, bodyArray, { prepare: true })
-            return result;
-        } catch (error : any) {
-            return error;
-        }
+        const result : any = await this.store(body, [key_name, 'created_at'])
+        return result;
     }
 }
 
